@@ -1,18 +1,18 @@
 {
-  "name": "product-manager-agent-marketplace",
-  "description": "Product Fullstack Agent plugin for Claude Code - from product idea to deployment with AI",
+  "name": "product-agent-marketplace",
+  "description": "Long-Running Product Fullstack Agent plugin for Claude Code - autonomous software development across multiple sessions",
   "owner": {
-    "name": "Product Manager Agent",
+    "name": "TeslaZY",
     "email": "TeslaZY@outlook.com"
   },
   "plugins": [
     {
-      "name": "product-manager-agent",
-      "description": "Full-stack development agent plugin with product manager, UI design, and development skills",
-      "version": "1.0.0",
+      "name": "Long-running_Product_Agent",
+      "description": "Long-running full-stack development agent with task-based workflow, session management, and complete SDLC automation from requirements to deployment",
+      "version": "2.0.0",
       "source": "./",
       "author": {
-        "name": "Product Manager Agent",
+        "name": "TeslaZY",
         "email": "TeslaZY@outlook.com"
       }
     }

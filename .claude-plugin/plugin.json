@@ -1,13 +1,24 @@
 {
-  "name": "product-manager-agent",
-  "description": "Full-stack development agent plugin with product manager, UI design, and development skills",
-  "version": "1.0.0",
+  "name": "Long-running_Product_Agent",
+  "description": "Long-running full-stack development agent with task-based workflow, session management, and complete SDLC automation from requirements to deployment",
+  "version": "2.0.0",
   "author": {
-    "name": "Product Manager Agent",
+    "name": "TeslaZY",
     "email": "TeslaZY@outlook.com"
   },
-  "homepage": "https://github.com/yourusername/product-manager-agent",
-  "repository": "https://github.com/yourusername/product-manager-agent",
+  "homepage": "https://github.com/TeslaZY/Long-running_Product_Agent",
+  "repository": "https://github.com/TeslaZY/Long-running_Product_Agent",
   "license": "MIT",
-  "keywords": ["product-manager", "fullstack", "ui-design", "tdd", "spec-driven", "workflow"]
+  "keywords": [
+    "long-running",
+    "product-manager",
+    "fullstack",
+    "ui-design",
+    "tdd",
+    "spec-driven",
+    "workflow",
+    "autonomous",
+    "task-based",
+    "session-management"
+  ]
 }

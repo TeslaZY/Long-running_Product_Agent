@@ -1,0 +1,567 @@
+{
+  "project_info": {
+    "name": "",
+    "description": "",
+    "created_at": "",
+    "last_updated": "",
+    "tech_stack": {}
+  },
+  "statistics": {
+    "total_tasks": 0,
+    "completed_tasks": 0,
+    "in_progress_tasks": 0,
+    "pending_tasks": 0,
+    "blocked_tasks": 0
+  },
+  "phases": [
+    {
+      "id": "phase-1",
+      "name": "Requirements Gathering",
+      "description": "Collect and document product requirements",
+      "status": "pending",
+      "tasks": [
+        {
+          "id": "req-001",
+          "category": "requirements",
+          "description": "Initialize project and understand user's product idea",
+          "steps": [
+            "Listen to user's product idea description",
+            "Ask clarifying questions about core objectives",
+            "Identify target users and use cases",
+            "Document initial understanding"
+          ],
+          "verification": [
+            "User confirms understanding is correct",
+            "Core objectives are clearly defined",
+            "Target users are identified"
+          ],
+          "passes": false,
+          "priority": "critical",
+          "dependencies": [],
+          "estimated_sessions": 1,
+          "artifacts": []
+        },
+        {
+          "id": "req-002",
+          "category": "requirements",
+          "description": "Conduct deep requirement analysis with tough questioning",
+          "steps": [
+            "Challenge ambiguous requirements",
+            "Detect logical contradictions",
+            "Question feature necessity",
+            "Identify edge cases and error scenarios",
+            "Document all clarifications"
+          ],
+          "verification": [
+            "No ambiguous terms remain",
+            "All contradictions resolved",
+            "Edge cases documented",
+            "User signs off on requirements"
+          ],
+          "passes": false,
+          "priority": "critical",
+          "dependencies": ["req-001"],
+          "estimated_sessions": 1,
+          "artifacts": []
+        },
+        {
+          "id": "req-003",
+          "category": "requirements",
+          "description": "Generate Product-Spec.md document",
+          "steps": [
+            "Use software-requirements-template.md structure",
+            "Fill in product overview",
+            "Document user personas",
+            "Define core features",
+            "Specify functional requirements",
+            "Define non-functional requirements",
+            "Add technical direction suggestions"
+          ],
+          "verification": [
+            "Product-Spec.md exists",
+            "All template sections filled",
+            "Document is coherent and complete",
+            "User approves document"
+          ],
+          "passes": false,
+          "priority": "critical",
+          "dependencies": ["req-002"],
+          "estimated_sessions": 1,
+          "artifacts": ["Product-Spec.md"]
+        },
+        {
+          "id": "req-004",
+          "category": "requirements",
+          "description": "Generate Product-Spec-CHANGELOG.md",
+          "steps": [
+            "Create changelog file",
+            "Record initial version as v0.1.0",
+            "Document all initial features"
+          ],
+          "verification": [
+            "Product-Spec-CHANGELOG.md exists",
+            "Version follows semantic versioning",
+            "All features documented"
+          ],
+          "passes": false,
+          "priority": "high",
+          "dependencies": ["req-003"],
+          "estimated_sessions": 1,
+          "artifacts": ["Product-Spec-CHANGELOG.md"]
+        }
+      ]
+    },
+    {
+      "id": "phase-2",
+      "name": "Technical Specification",
+      "description": "Create technical specifications and project principles",
+      "status": "pending",
+      "tasks": [
+        {
+          "id": "spec-001",
+          "category": "specification",
+          "description": "Establish project constitution and principles",
+          "steps": [
+            "Define code quality standards",
+            "Set testing requirements",
+            "Establish UX consistency guidelines",
+            "Define performance requirements",
+            "Create .specify/memory/constitution.md"
+          ],
+          "verification": [
+            "constitution.md exists",
+            "Standards are measurable",
+            "Team can follow guidelines"
+          ],
+          "passes": false,
+          "priority": "high",
+          "dependencies": ["req-004"],
+          "estimated_sessions": 1,
+          "artifacts": [".specify/memory/constitution.md"]
+        },
+        {
+          "id": "spec-002",
+          "category": "specification",
+          "description": "Transform Product-Spec into technical specifications",
+          "steps": [
+            "Analyze each feature from Product-Spec",
+            "Define technical requirements (not implementation)",
+            "Create feature specs in specs/<feature>/spec.md",
+            "Focus on 'what' and 'why'"
+          ],
+          "verification": [
+            "specs/ directory created",
+            "Each feature has spec.md",
+            "Specs are implementation-agnostic",
+            "All requirements covered"
+          ],
+          "passes": false,
+          "priority": "high",
+          "dependencies": ["spec-001"],
+          "estimated_sessions": 2,
+          "artifacts": ["specs/*/spec.md"]
+        },
+        {
+          "id": "spec-003",
+          "category": "specification",
+          "description": "Clarify technical details and edge cases",
+          "steps": [
+            "Review each spec for gaps",
+            "Fill in underspecified areas",
+            "Document technical decision points",
+            "Resolve ambiguities"
+          ],
+          "verification": [
+            "No gaps in specifications",
+            "Technical decisions documented",
+            "Edge cases addressed"
+          ],
+          "passes": false,
+          "priority": "medium",
+          "dependencies": ["spec-002"],
+          "estimated_sessions": 1,
+          "artifacts": []
+        },
+        {
+          "id": "spec-004",
+          "category": "specification",
+          "description": "Validate requirement completeness",
+          "steps": [
+            "Run completeness checklist",
+            "Verify clarity of all requirements",
+            "Check consistency across specs",
+            "Get user approval"
+          ],
+          "verification": [
+            "Checklist passes all items",
+            "No inconsistencies found",
+            "User approves specifications"
+          ],
+          "passes": false,
+          "priority": "high",
+          "dependencies": ["spec-003"],
+          "estimated_sessions": 1,
+          "artifacts": []
+        }
+      ]
+    },
+    {
+      "id": "phase-3",
+      "name": "UI/UX Design",
+      "description": "Design user interface and generate UI prompts",
+      "status": "pending",
+      "tasks": [
+        {
+          "id": "ui-001",
+          "category": "design",
+          "description": "Generate UI prototype prompts",
+          "steps": [
+            "Read Product-Spec.md and specs",
+            "Define UI components needed",
+            "Generate prompts for each screen/view",
+            "Create UI-Prompts.md"
+          ],
+          "verification": [
+            "UI-Prompts.md exists",
+            "All screens covered",
+            "Prompts are detailed enough",
+            "User approves prompts"
+          ],
+          "passes": false,
+          "priority": "high",
+          "dependencies": ["spec-004"],
+          "estimated_sessions": 1,
+          "artifacts": ["UI-Prompts.md"]
+        },
+        {
+          "id": "ui-002",
+          "category": "design",
+          "description": "User confirms prototype designs",
+          "steps": [
+            "User generates prototypes using external tools",
+            "Review prototype images",
+            "Collect feedback",
+            "Finalize design direction"
+          ],
+          "verification": [
+            "Prototype images exist",
+            "User confirms design",
+            "Design direction documented"
+          ],
+          "passes": false,
+          "priority": "high",
+          "dependencies": ["ui-001"],
+          "estimated_sessions": 1,
+          "artifacts": ["prototypes/"]
+        }
+      ]
+    },
+    {
+      "id": "phase-4",
+      "name": "Architecture & Planning",
+      "description": "Design system architecture and create implementation plans",
+      "status": "pending",
+      "tasks": [
+        {
+          "id": "arch-001",
+          "category": "architecture",
+          "description": "Create technical implementation plan",
+          "steps": [
+            "Select technology stack",
+            "Define system architecture",
+            "Design data models",
+            "Plan API contracts",
+            "Create specs/<feature>/plan.md"
+          ],
+          "verification": [
+            "plan.md exists for each feature",
+            "Tech stack is decided",
+            "Architecture diagram created",
+            "API contracts defined"
+          ],
+          "passes": false,
+          "priority": "critical",
+          "dependencies": ["ui-002"],
+          "estimated_sessions": 2,
+          "artifacts": ["specs/*/plan.md", "contracts/"]
+        },
+        {
+          "id": "arch-002",
+          "category": "architecture",
+          "description": "Break down implementation into tasks",
+          "steps": [
+            "Create user stories from specs",
+            "Break stories into development tasks",
+            "Define task dependencies",
+            "Mark parallel execution opportunities",
+            "Create specs/<feature>/tasks.md"
+          ],
+          "verification": [
+            "tasks.md exists for each feature",
+            "Tasks are small (2-5 min each)",
+            "Dependencies mapped",
+            "Parallel tasks identified"
+          ],
+          "passes": false,
+          "priority": "high",
+          "dependencies": ["arch-001"],
+          "estimated_sessions": 1,
+          "artifacts": ["specs/*/tasks.md"]
+        },
+        {
+          "id": "arch-003",
+          "category": "architecture",
+          "description": "Cross-artifact consistency analysis",
+          "steps": [
+            "Compare spec.md, plan.md, tasks.md",
+            "Verify coverage",
+            "Check for contradictions",
+            "Resolve inconsistencies"
+          ],
+          "verification": [
+            "All artifacts consistent",
+            "No coverage gaps",
+            "Analysis report generated"
+          ],
+          "passes": false,
+          "priority": "medium",
+          "dependencies": ["arch-002"],
+          "estimated_sessions": 1,
+          "artifacts": ["research.md"]
+        },
+        {
+          "id": "arch-004",
+          "category": "architecture",
+          "description": "Brainstorm and refine design approach",
+          "steps": [
+            "Review all design decisions",
+            "Explore alternatives",
+            "Validate technical approach",
+            "Get user approval on design"
+          ],
+          "verification": [
+            "Design reviewed",
+            "Alternatives considered",
+            "User approves approach"
+          ],
+          "passes": false,
+          "priority": "medium",
+          "dependencies": ["arch-003"],
+          "estimated_sessions": 1,
+          "artifacts": []
+        }
+      ]
+    },
+    {
+      "id": "phase-5",
+      "name": "Frontend Development",
+      "description": "Implement frontend based on design specifications",
+      "status": "pending",
+      "tasks": [
+        {
+          "id": "fe-001",
+          "category": "frontend",
+          "description": "Initialize frontend project structure",
+          "steps": [
+            "Create project directory",
+            "Initialize package manager",
+            "Configure build tools",
+            "Set up development server",
+            "Create init.sh script"
+          ],
+          "verification": [
+            "Project structure created",
+            "npm install succeeds",
+            "Dev server starts",
+            "init.sh works"
+          ],
+          "passes": false,
+          "priority": "critical",
+          "dependencies": ["arch-004"],
+          "estimated_sessions": 1,
+          "artifacts": ["init.sh", "package.json"]
+        },
+        {
+          "id": "fe-002",
+          "category": "frontend",
+          "description": "Implement core layout and navigation",
+          "steps": [
+            "Create main layout component",
+            "Implement navigation",
+            "Set up routing",
+            "Create responsive structure"
+          ],
+          "verification": [
+            "Layout renders correctly",
+            "Navigation works",
+            "Responsive on different screens",
+            "No console errors"
+          ],
+          "passes": false,
+          "priority": "critical",
+          "dependencies": ["fe-001"],
+          "estimated_sessions": 1,
+          "artifacts": []
+        }
+      ]
+    },
+    {
+      "id": "phase-6",
+      "name": "Backend Development",
+      "description": "Implement backend services and APIs",
+      "status": "pending",
+      "tasks": [
+        {
+          "id": "be-001",
+          "category": "backend",
+          "description": "Initialize backend project structure",
+          "steps": [
+            "Create server directory",
+            "Set up framework",
+            "Configure database",
+            "Create API structure"
+          ],
+          "verification": [
+            "Server starts successfully",
+            "Database connected",
+            "Health endpoint works"
+          ],
+          "passes": false,
+          "priority": "critical",
+          "dependencies": ["arch-004"],
+          "estimated_sessions": 1,
+          "artifacts": []
+        }
+      ]
+    },
+    {
+      "id": "phase-7",
+      "name": "Testing & Verification",
+      "description": "Test and verify all functionality",
+      "status": "pending",
+      "tasks": [
+        {
+          "id": "test-001",
+          "category": "testing",
+          "description": "Write unit tests for core functions",
+          "steps": [
+            "Identify testable units",
+            "Write test cases",
+            "Run tests",
+            "Fix failures"
+          ],
+          "verification": [
+            "Tests exist for core functions",
+            "All tests pass",
+            "Coverage meets standards"
+          ],
+          "passes": false,
+          "priority": "high",
+          "dependencies": ["fe-002", "be-001"],
+          "estimated_sessions": 1,
+          "artifacts": []
+        },
+        {
+          "id": "test-002",
+          "category": "testing",
+          "description": "End-to-end testing",
+          "steps": [
+            "Create E2E test scenarios",
+            "Test user workflows",
+            "Verify UI functionality",
+            "Test API integration"
+          ],
+          "verification": [
+            "E2E tests pass",
+            "All user flows work",
+            "No regressions"
+          ],
+          "passes": false,
+          "priority": "high",
+          "dependencies": ["test-001"],
+          "estimated_sessions": 1,
+          "artifacts": []
+        }
+      ]
+    },
+    {
+      "id": "phase-8",
+      "name": "Code Review & Refinement",
+      "description": "Review code quality and refine implementation",
+      "status": "pending",
+      "tasks": [
+        {
+          "id": "review-001",
+          "category": "review",
+          "description": "Conduct code review",
+          "steps": [
+            "Review code against plan",
+            "Check coding standards",
+            "Identify improvements",
+            "Report issues by severity"
+          ],
+          "verification": [
+            "Review completed",
+            "Issues documented",
+            "Critical issues resolved"
+          ],
+          "passes": false,
+          "priority": "medium",
+          "dependencies": ["test-002"],
+          "estimated_sessions": 1,
+          "artifacts": []
+        }
+      ]
+    },
+    {
+      "id": "phase-9",
+      "name": "Deployment & Delivery",
+      "description": "Deploy and deliver the final product",
+      "status": "pending",
+      "tasks": [
+        {
+          "id": "deploy-001",
+          "category": "deployment",
+          "description": "Prepare for deployment",
+          "steps": [
+            "Final verification test",
+            "Build production version",
+            "Configure environment",
+            "Deploy to target"
+          ],
+          "verification": [
+            "Production build succeeds",
+            "Deployed successfully",
+            "Application accessible"
+          ],
+          "passes": false,
+          "priority": "critical",
+          "dependencies": ["review-001"],
+          "estimated_sessions": 1,
+          "artifacts": []
+        },
+        {
+          "id": "deploy-002",
+          "category": "deployment",
+          "description": "Final acceptance and audit",
+          "steps": [
+            "Verify all features work in production",
+            "Check against Product-Spec",
+            "Get user acceptance",
+            "Complete documentation"
+          ],
+          "verification": [
+            "All features verified",
+            "Spec matches implementation",
+            "User accepts delivery"
+          ],
+          "passes": false,
+          "priority": "critical",
+          "dependencies": ["deploy-001"],
+          "estimated_sessions": 1,
+          "artifacts": []
+        }
+      ]
+    }
+  ]
+}
