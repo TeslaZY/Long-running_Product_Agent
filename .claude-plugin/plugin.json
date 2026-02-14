@@ -1,27 +1,23 @@
 {
-  "name": "p2c-agent",
-  "description": "Product-to-Code Agent: Transform product ideas into production code autonomously. From requirements to deployment - handles specs, design, coding, testing, and review automatically.",
-  "version": "2.1.0",
+  "name": "pm-agent",
+  "description": "PM Agent: Transform product ideas into comprehensive PRD documents and prototypes. Focus on requirement gathering, user analysis, feature design, and documentation for product managers.",
+  "version": "1.0.0",
   "author": {
     "name": "TeslaZY",
     "email": "TeslaZY@outlook.com"
   },
-  "homepage": "https://github.com/TeslaZY/product-to-code",
-  "repository": "https://github.com/TeslaZY/product-to-code",
+  "homepage": "https://github.com/TeslaZY/pm-agent",
+  "repository": "https://github.com/TeslaZY/pm-agent",
   "license": "MIT",
   "keywords": [
-    "product-to-code",
-    "p2c",
-    "autonomous-agent",
-    "product-development",
-    "fullstack",
-    "requirements-gathering",
-    "spec-driven",
-    "task-based",
-    "session-management",
-    "tdd",
-    "ui-design",
-    "code-generation",
-    "sdlc-automation"
+    "pm-agent",
+    "product-manager",
+    "requirement-gathering",
+    "prd",
+    "user-stories",
+    "prototype-design",
+    "product-design",
+    "documentation",
+    "pencil-mcp"
   ]
 }

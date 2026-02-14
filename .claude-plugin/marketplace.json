@@ -1,6 +1,6 @@
 {
-  "name": "product-to-code",
-  "description": "Transform product ideas into production code. Autonomous full-stack development agent that works across multiple sessions.",
+  "name": "pm-agent",
+  "description": "Transform product ideas into comprehensive PRD documents and interactive prototypes. A product manager's companion for requirement gathering, user analysis, and documentation.",
   "owner": {
     "name": "TeslaZY",
     "email": "TeslaZY@outlook.com",
@@ -8,15 +8,15 @@
   },
   "plugins": [
     {
-      "name": "p2c-agent",
-      "description": "Product-to-Code Agent: Complete SDLC automation from requirements gathering to deployment. Works across unlimited context windows.",
-      "version": "2.1.0",
+      "name": "pm-agent",
+      "description": "PM Agent: Complete product management workflow from idea to PRD and prototypes. Includes requirement discovery, tough questioning analysis, PRD writing, and prototype design with Pencil MCP.",
+      "version": "1.0.0",
       "source": "./",
       "author": {
         "name": "TeslaZY",
         "email": "TeslaZY@outlook.com"
       },
-      "tags": ["automation", "fullstack", "product-to-code", "sdlc", "autonomous"]
+      "tags": ["product-management", "prd", "requirements", "prototype", "documentation"]
     }
   ]
 }
